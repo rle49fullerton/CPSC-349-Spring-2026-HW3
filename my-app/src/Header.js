@@ -1,14 +1,15 @@
 function Header({ onInputChange, onSortChange }) {
     return (
-        <div>
-            <h1>Movie Explorer</h1>
-            <div>
+        <div className="Header">
+            <h1 id="Title">Movie Explorer</h1>
+            <div className="UserInput">
                 <input 
+                    className="SearchBar"
                     type="text" 
                     placeholder="Search movies..." 
                     onChange={onInputChange}
                 />
-                <select onChange={onSortChange} >
+                <select className="SortBy"onChange={onSortChange} >
                     <option value="popularity.desc">Sort By</option>
                     <option value="primary_release_date.asc">Release Date (ASC)</option>
                     <option value="primary_release_date.desc">Release Date (DESC)</option>

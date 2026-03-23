@@ -1,3 +1,46 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.UserInput {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.SearchBar {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    width: 70%;
+    font-size: 24px;
+}
+.SearchBar:focus {
+    outline: none;
+    box-shadow: 0 0 5px black;
+}
+
+.SortBy {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.SortBy:focus {
+    outline: none;
+    box-shadow: 0 0 5px black;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-image: linear-gradient(to top, rgba(255, 153, 204, 0), rgba(255, 153, 204, 1));
+}
+
 .Body {
     display: flex;
     flex-wrap: wrap;
@@ -8,9 +51,13 @@
 .Footer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: linear-gradient(to bottom, rgba(255, 153, 204, 0), rgba(255, 153, 204, 1));
 }
 
 .MovieBox {
+    background-color: white;
     border: 1px solid gray;
     border-radius: 15px;
     display: flex;
@@ -23,6 +70,25 @@
     margin: 10px;
 }
 
+#Title {
+    font-size: 3.5em;
+    text-shadow: 0 0 3px #000000;
+    color: white;
+}
+
 img {
     border-radius: 15px;
+}
+
+button {
+    padding: 15px 45px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #d966ff;
+}
+
+button:hover {
+    background-color: #e799ff;
 }

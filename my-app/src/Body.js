@@ -2,7 +2,7 @@ import MovieBox from "./MovieBox.js";
 
 function Body({ movies }) {
     return (
-        <div class="Body">
+        <div className="Body">
             {movies.map((movie, index) => (
                 <div key={index}>
                     <MovieBox 

@@ -13,6 +13,7 @@ const options = {
 };
 
 function App() {
+  const [queryType, setQueryType] = useState('discover');
   const [input, setInput] = useState('');
   const [sortBy, setSortBy] = useState('popularity.desc');
   const [movies, setMovies] = useState([]);
@@ -26,9 +27,10 @@ function App() {
       .then(data => {
         setMovies(data.results);
         setTotalPages(data.total_pages);
+        setQueryType('discover');
       })
       .catch(err => console.error(err));
-  }, [sortBy, currentPage]);
+  }, [sortBy]);
 
   // Called when input in search bar changes
   useEffect(() => {
@@ -40,6 +42,7 @@ function App() {
         .then(data => {
           setMovies(data.results);
           setTotalPages(data.total_pages);
+          setQueryType('search');
         })
         .catch(err => console.error(err));
     } else {
@@ -48,10 +51,34 @@ function App() {
         .then(data => {
           setMovies(data.results);
           setTotalPages(data.total_pages);
+          setQueryType('discover');
         })
         .catch(err => console.error(err));
     }
-  }, [input, currentPage]);
+  }, [input]);
+
+  // Called when Prev or Next button is clicked
+  useEffect(() => {
+    if (queryType === 'search') {
+      fetch(`https://api.themoviedb.org/3/search/movie?query=${input}&include_adult=false&language=en-US&page=${currentPage}`, options)
+        .then(res => res.json())
+        .then(data => {
+          setMovies(data.results);
+          setTotalPages(data.total_pages);
+          setQueryType('search');
+        })
+        .catch(err => console.error(err));
+    } else {
+      fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${currentPage}&sort_by=${sortBy}`, options)
+        .then(res => res.json())
+        .then(data => {
+          setMovies(data.results);
+          setTotalPages(data.total_pages);
+          setQueryType('discover');
+        })
+        .catch(err => console.error(err));
+    }
+  }, [currentPage]);
 
   const handleOnInputChange = (event) => {
     setInput(event.target.value);
