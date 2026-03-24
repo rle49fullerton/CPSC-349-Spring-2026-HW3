@@ -76,6 +76,14 @@
     color: white;
 }
 
+.NoImage {
+    text-align: center;
+    width: 300px;
+    height: 450px;
+    background-color: #bfbfbf;
+    border-radius: 15px;
+}
+
 img {
     border-radius: 15px;
 }

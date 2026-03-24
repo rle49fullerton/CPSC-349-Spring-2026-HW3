@@ -3,7 +3,11 @@ function MovieBox({ title, releaseDate, rating, posterPath }) {
 
     return (
         <div className="MovieBox">
-            <img src={baseUrl + posterPath} alt={title} />
+            {<img 
+                className={posterPath ? null : 'NoImage'}
+                src={baseUrl + posterPath} 
+                alt={title} 
+            />}
             <h2>{title}</h2>
             <p>Release Date: {releaseDate}</p>
             <p>Rating: {rating}</p>
