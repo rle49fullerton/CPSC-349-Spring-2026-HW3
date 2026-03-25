@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CPSC-349-2026-HW3/static/css/main.6401bf04.css",
-    "main.js": "/CPSC-349-2026-HW3/static/js/main.21f2b130.js",
-    "static/js/453.e9e7ec89.chunk.js": "/CPSC-349-2026-HW3/static/js/453.e9e7ec89.chunk.js",
-    "index.html": "/CPSC-349-2026-HW3/index.html",
-    "main.6401bf04.css.map": "/CPSC-349-2026-HW3/static/css/main.6401bf04.css.map",
-    "main.21f2b130.js.map": "/CPSC-349-2026-HW3/static/js/main.21f2b130.js.map",
-    "453.e9e7ec89.chunk.js.map": "/CPSC-349-2026-HW3/static/js/453.e9e7ec89.chunk.js.map"
+    "main.css": "/CPSC-349-Spring-2026-HW3/static/css/main.6401bf04.css",
+    "main.js": "/CPSC-349-Spring-2026-HW3/static/js/main.913f7e35.js",
+    "static/js/453.e9e7ec89.chunk.js": "/CPSC-349-Spring-2026-HW3/static/js/453.e9e7ec89.chunk.js",
+    "index.html": "/CPSC-349-Spring-2026-HW3/index.html",
+    "main.6401bf04.css.map": "/CPSC-349-Spring-2026-HW3/static/css/main.6401bf04.css.map",
+    "main.913f7e35.js.map": "/CPSC-349-Spring-2026-HW3/static/js/main.913f7e35.js.map",
+    "453.e9e7ec89.chunk.js.map": "/CPSC-349-Spring-2026-HW3/static/js/453.e9e7ec89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6401bf04.css",
-    "static/js/main.21f2b130.js"
+    "static/js/main.913f7e35.js"
   ]
 }
